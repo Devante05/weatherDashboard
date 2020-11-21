@@ -53,9 +53,37 @@ function getForecast(cityName) {
     // var response = $.get(): when the value is resolved
     .then(function (response) {
       console.log(response);
-
 $("#wind").text("Wind speed:" + response.list[8].wind.speed);      
 $("#temp").text("Temp(F):" + response.list[8].main.temp);
+
+
+
+$("#date1").text(response.list[4].dt_txt);      
+$("#temp1").text("Temp(F):" + response.list[4].main.temp);
+$("#wind1").text("Wind speed:" + response.list[4].wind.speed);
+$("#humid1").text(response.list[4].main.humidity);
+
+$("#date2").text(response.list[12].dt_txt);      
+$("#temp2").text("Temp(F):" + response.list[12].main.temp);
+$("#wind2").text("Wind speed:" + response.list[12].wind.speed);
+$("#humid2").text(response.list[12].main.humidity);
+
+$("#date3").text(response.list[20].dt_txt);      
+$("#temp3").text("Temp(F):" + response.list[20].main.temp);
+$("#wind3").text("Wind speed:" + response.list[20].wind.speed);
+$("#humid3").text(response.list[20].main.humidity);
+
+$("#date4").text(response.list[28].dt_txt);      
+$("#temp4").text("Temp(F):" + response.list[28].main.temp);
+$("#wind4").text("Wind speed:" + response.list[28].wind.speed);
+$("#humid4").text(response.list[28].main.humidity)
+
+$("#date5").text(response.list[36].dt_txt);      
+$("#temp5").text("Temp(F):" + response.list[36].main.temp);
+$("#wind5").text("Wind speed:" + response.list[36].wind.speed);
+$("#humid5").text(response.list[36].main.humidity)
+
+
 
       // for (var i = 0; i < response.list.length; i++) {
       //   if (true) { // find some evaluation for noon
