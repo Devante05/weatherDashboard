@@ -35,3 +35,10 @@ $.ajax({}).then(function(response) {
 
     });
 });# weatherDashboard
+
+city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+
+
+link to work
+https://devante05.github.io/weatherDashboard/.
+https://github.com/Devante05/weatherDashboard
