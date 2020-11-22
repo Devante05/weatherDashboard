@@ -39,3 +39,31 @@ body {
  background-color: #e9ecef;;
 
 }
+
+
+.higherUV {
+  color: purple;
+
+}
+.highUV {
+color: red;
+}
+
+.medUV {
+  color: orange;
+}
+
+.aveUV {
+  color: yellow;
+}
+
+.lowUV {
+  color: green;
+}
+
+#currentDayInfo {
+  color: white;
+
+  background-color: black;
+
+}

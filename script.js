@@ -49,12 +49,11 @@ function getWeather(cityName) {
       // currentWind.text(response.wind.speed);
       // day1El.text(response.date);
 
-      $("#wind").text("Wind speed:" + response.wind.speed);      
+      $("#wind").text("Wind speed:" + response.wind.speed + "mph");      
       $("#temp").text("Temp(F):" + response.main.temp);
       humid.text("Humidity:" + response.main.humidity);
       $("#icon").text(response.weather[0].icon);
       $("#weatherCurr").text(response.weather[0].description);
-
 
       getUVI(response.coord);
     })
@@ -114,7 +113,6 @@ humid5.text("Humidity:" + response.list[36].main.humidity)
     })
     .catch(function (err) {
       console.warn(err);
-      currentIcon.text(response.list)
     });
 }
 
@@ -132,6 +130,24 @@ function getUVI(coord) {
     // var response = $.get(): when the value is resolved
     .then(function (response) {
       console.log(response);
+      $("#uv").text("UV Index: " + response.value);
+
+      if (response.value >= 11){
+        $("#uv").addClass("higherUV");
+      };
+      if (response.value < 11 && response.value >= 8){
+        $("#uv").addClass("highUV");
+      }
+      if (response.value < 8 && response.value >= 6){
+        $("#uv").addClass("medUV");
+      }
+      if (response.value < 6 && response.value >= 3){
+        $("#uv").addClass("aveUV");
+      }
+      if (response.value < 3 && response.value >= 0){
+        $("#uv").addClass("lowUV");
+      }
+     
     })
     .catch(function (err) {
       console.warn(err);
