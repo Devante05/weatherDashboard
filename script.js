@@ -24,6 +24,9 @@ var humid3 = $("#humid3");
 var humid4 = $("#humid4");
 var humid5 = $("#humid5");
 
+var classNames= [".higherUV", ".highUV", ".medUV", ".aveUV", ".lowUV"]
+
+
 
 
 submitForm.on("submit", function (e) {
@@ -132,18 +135,28 @@ function getUVI(coord) {
       console.log(response);
       $("#uv").text("UV Index: " + response.value);
       if (response.value >= 11){
+        $("#uv").removeClass(classNames);
+
         $("#uv").addClass("higherUV");
       };
       if (response.value < 11 && response.value >= 8){
+        $("#uv").removeClass(classNames);
+
         $("#uv").addClass("highUV");
       }
       if (response.value < 8 && response.value >= 6){
+        $("#uv").removeClass(classNames);
+
         $("#uv").addClass("medUV");
       }
       if (response.value < 6 && response.value >= 3){
+        $("#uv").removeClass(classNames);
+
         $("#uv").addClass("aveUV");
       }
       if (response.value < 3 && response.value >= 0){
+        $("#uv").removeClass(classNames);
+
         $("#uv").addClass("lowUV");
       }
 
@@ -157,3 +170,4 @@ function getUVI(coord) {
     });
 
 }
+
