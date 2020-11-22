@@ -121,7 +121,7 @@ humid5.text("Humidity:" + response.list[36].main.humidity)
 // }
 
 function getUVI(coord) {
-  const UVI_URL = "http://api.openweathermap.org/data/2.5/uvi?";
+  const UVI_URL = "https://api.openweathermap.org/data/2.5/uvi?";
   const LAT = "lat=" + coord.lat;
   const LON = "&lon=" + coord.lon;
   const URL = UVI_URL + LAT + LON + API_KEY;
