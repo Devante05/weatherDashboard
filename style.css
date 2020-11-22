@@ -1,5 +1,7 @@
 .header {
   height: 20px;
+  background-color: #3AAFA9;
+
 }
 
 #day1 {
@@ -26,4 +28,14 @@ margin-left: 15px;
 #day5 {
   margin-right: 15px;
   margin-left: 15px;
+}
+
+body {
+
+  background-color: #3AAFA9;
+}
+
+#header{
+ background-color: #e9ecef;;
+
 }

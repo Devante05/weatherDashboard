@@ -7,18 +7,20 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <header class="jumbotron">
+    <header class="jumbotron" id= "header">
       <div class="container">
-        <h1>Welcome. Here's the weather for today</h1>
+        <h1>Welcome. Here's the weather for today.</h1>
         <div id = "currentDay"></div>
-        <div class="col card" id ="currentDayinfo">
+        <div class="col card lg-col-2" id ="currentDayinfo">
+            <div id = "weatherCurr" ></div>
             <div id = "date" ></div>
-            <div id = "icon" ></div>
+            <img id = "icon" >
             <div id = "temp" ></div>
             <div id = "humid" ></div>
             <div id = "wind" ></div>

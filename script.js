@@ -52,7 +52,9 @@ function getWeather(cityName) {
       $("#wind").text("Wind speed:" + response.wind.speed);      
       $("#temp").text("Temp(F):" + response.main.temp);
       humid.text("Humidity:" + response.main.humidity);
-      $("icon").text(response.weather[0].icon);
+      $("#icon").text(response.weather[0].icon);
+      $("#weatherCurr").text(response.weather[0].description);
+
 
       getUVI(response.coord);
     })
