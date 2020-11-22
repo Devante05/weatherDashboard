@@ -131,6 +131,23 @@ function getUVI(coord) {
     .then(function (response) {
       console.log(response);
       $("#uv").text("UV Index: " + response.value);
+      if (response.value >= 11){
+        $("#uv").addClass("higherUV");
+      };
+      if (response.value < 11 && response.value >= 8){
+        $("#uv").addClass("highUV");
+      }
+      if (response.value < 8 && response.value >= 6){
+        $("#uv").addClass("medUV");
+      }
+      if (response.value < 6 && response.value >= 3){
+        $("#uv").addClass("aveUV");
+      }
+      if (response.value < 3 && response.value >= 0){
+        $("#uv").addClass("lowUV");
+      }
+
+      // how to clear class aft
 
       
      
@@ -138,19 +155,5 @@ function getUVI(coord) {
     .catch(function (err) {
       console.warn(err);
     });
-    if (response.value >= 11){
-      $("#uv").addClass("higherUV");
-    };
-    if (response.value < 11 && response.value >= 8){
-      $("#uv").addClass("highUV");
-    }
-    if (response.value < 8 && response.value >= 6){
-      $("#uv").addClass("medUV");
-    }
-    if (response.value < 6 && response.value >= 3){
-      $("#uv").addClass("aveUV");
-    }
-    if (response.value < 3 && response.value >= 0){
-      $("#uv").addClass("lowUV");
-    }
+
 }
