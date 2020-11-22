@@ -1,3 +1,6 @@
+$("#currentDay").append(moment().format('dddd, MMM Do'));
+
+
 const API_KEY = "&appid=31d71cb5a78f78a82e0bd617cfe323be&units=imperial";
 
 const submitForm = $("#run-search");
@@ -8,7 +11,6 @@ var day2El = $("#day2")
 var day3El = $("#day3")
 var day4El = $("#day4")
 var day5El = $("#day5")
-var currentDayEl = $("#currentDay")
 
 // var currentWind = $("#wind")
 // var currentDate = $()
@@ -50,6 +52,7 @@ function getWeather(cityName) {
       $("#wind").text("Wind speed:" + response.wind.speed);      
       $("#temp").text("Temp(F):" + response.main.temp);
       humid.text("Humidity:" + response.main.humidity);
+      $("icon").text(response.weather[0].icon);
 
       getUVI(response.coord);
     })
@@ -75,27 +78,27 @@ function getForecast(cityName) {
 
 $("#date1").text(response.list[4].dt_txt);      
 $("#temp1").text("Temp(F):" + response.list[4].main.temp);
-$("#wind1").text("Wind speed:" + response.list[4].wind.speed);
+$("#wind1").text("Wind speed:" + response.list[4].wind.speed + "mph");
 humid1.text("Humidity:" + response.list[4].main.humidity);
 
 $("#date2").text(response.list[12].dt_txt);      
 $("#temp2").text("Temp(F):" + response.list[12].main.temp);
-$("#wind2").text("Wind speed:" + response.list[12].wind.speed);
+$("#wind2").text("Wind speed:" + response.list[12].wind.speed + "mph");
 humid2.text("Humidity:" + response.list[12].main.humidity);
 
 $("#date3").text(response.list[20].dt_txt);      
 $("#temp3").text("Temp(F):" + response.list[20].main.temp);
-$("#wind3").text("Wind speed:" + response.list[20].wind.speed);
+$("#wind3").text("Wind speed:" + response.list[20].wind.speed + "mph");
 humid3.text("Humidity:" + response.list[20].main.humidity);
 
 $("#date4").text(response.list[28].dt_txt);      
 $("#temp4").text("Temp(F):" + response.list[28].main.temp);
-$("#wind4").text("Wind speed:" + response.list[28].wind.speed);
+$("#wind4").text("Wind speed:" + response.list[28].wind.speed + "mph");
 humid4.text( "Humidity:" +response.list[28].main.humidity)
 
 $("#date5").text(response.list[36].dt_txt);      
 $("#temp5").text("Temp(F):" + response.list[36].main.temp);
-$("#wind5").text("Wind speed:" + response.list[36].wind.speed);
+$("#wind5").text("Wind speed:" + response.list[36].wind.speed + "mph");
 humid5.text("Humidity:" + response.list[36].main.humidity)
 
 
