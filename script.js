@@ -26,7 +26,7 @@ submitForm.on("submit", function (e) {
 });
 
 function getWeather(cityName) {
-  const WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+  const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
   const URL = WEATHER_URL + cityName + API_KEY;
 
   $.get(URL)
@@ -47,7 +47,7 @@ function getWeather(cityName) {
 }
 
 function getForecast(cityName) {
-  const FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast?q=";
+  const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast?q=";
   const URL = FORECAST_URL + cityName + API_KEY;
   $.get(URL)
     // var response = $.get(): when the value is resolved
