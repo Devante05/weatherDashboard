@@ -7,26 +7,17 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <header class="jumbotron" id= "header">
+    <header class="jumbotron" id="header">
       <div class="container">
         <h1>Welcome. Here's the weather for today.</h1>
-        <div id = "currentDay"></div>
-        <div class="col card lg-col-2" id ="currentDayInfo">
-            <div id = "weatherCurr" ></div>
-            <div id = "date" ></div>
-            <img id = "icon" >
-            <div id = "temp" ></div>
-            <div id = "humid" ></div>
-            <div id = "wind" ></div>
-            <div id = "uv" ></div>
-        </div>
-    </div>
+        <div id="currentDay"></div>
+      </div>
     </header>
 
     <div class="container">
@@ -35,55 +26,68 @@
           <h6>Enter your city to explore the weather.</h6>
 
           <form id="run-search" class="form-group">
-            <input class="form-control" type="text" placeholder="City Name" id="cityInput" required />
+            <input
+              class="form-control"
+              type="text"
+              placeholder="City Name"
+              id="cityInput"
+              required
+            />
             <button class="btn btn-dark">Submit</button>
           </form>
-
         </div>
-        <br>
-        <h1 id="cityName"></h1>
-        <div class="col-12">
-            <div class="row">
-        
-       
-            
-            <div class="col card lg-col-2" id ="day1">
-                <div id = "date1" ></div>
-                <div id = "icon1" ></div>
-                <div id = "temp1" ></div>
-                <div id = "humid1" ></div>
-                <div id = "wind1" ></div>
-            </div>
-            <div class="col card lg-col-2" id ="day2">
-                <div id = "date2" ></div>
-                <div id = "icon2" ></div>
-                <div id = "temp2" ></div>
-                <div id = "humid2" ></div>
-                <div id = "wind2" ></div>
-            </div>
-            <div class="col card lg-col-2" id ="day3">
-                <div id = "date3" ></div>
-                <div id = "icon3" ></div>
-                <div id = "temp3" ></div>
-                <div id = "humid3" ></div>
-                <div id = "wind3" ></div>
-            </div>
-            <div class="col card lg-col-2" id ="day4">
-                <div id = "date4" ></div>
-                <div id = "icon4" ></div>
-                <div id = "temp4" ></div>
-                <div id = "humid4" ></div>
-                <div id = "wind4" ></div>
-            </div>
-            <div class="col card lg-col-2" id ="day5">
-                <div id = "date5" ></div>
-                <div id = "icon5" ></div>
-                <div id = "temp5" ></div>
-                <div id = "humid5" ></div>
-                <div id = "wind5" ></div>
+
+        <div class="col-8">
+          <div class="mb-3">
+            <div class="card p-3" id="currentDayInfo">
+              <h1 id="cityName"></h1>
+              <div id="weatherCurr"></div>
+              <div id="date"></div>
+              <img id="icon" />
+              <div id="temp"></div>
+              <div id="humid"></div>
+              <div id="wind"></div>
+              <div id="uv"></div>
             </div>
           </div>
-        </div>
+          <div class="row" id="forecastDiv">
+            <!-- <div class="col card " id="day1">
+              <div id="date1"></div>
+              <div id="icon1"></div>
+              <div id="temp1"></div>
+              <div id="humid1"></div>
+              <div id="wind1"></div>
+            </div>
+            <div class="col card lg-col-2" id="day2">
+              <div id="date2"></div>
+              <div id="icon2"></div>
+              <div id="temp2"></div>
+              <div id="humid2"></div>
+              <div id="wind2"></div>
+            </div>
+            <div class="col card lg-col-2" id="day3">
+              <div id="date3"></div>
+              <div id="icon3"></div>
+              <div id="temp3"></div>
+              <div id="humid3"></div>
+              <div id="wind3"></div>
+            </div>
+            <div class="col card lg-col-2" id="day4">
+              <div id="date4"></div>
+              <div id="icon4"></div>
+              <div id="temp4"></div>
+              <div id="humid4"></div>
+              <div id="wind4"></div>
+            </div>
+            <div class="col card lg-col-2" id="day5">
+              <div id="date5"></div>
+              <div id="icon5"></div>
+              <div id="temp5"></div>
+              <div id="humid5"></div>
+              <div id="wind5"></div>
+            </div> -->
+          </div>
+        </di>
       </div>
     </div>
 
@@ -133,7 +137,6 @@
       </div>
     </section> -->
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
