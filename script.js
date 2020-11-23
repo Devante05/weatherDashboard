@@ -51,11 +51,20 @@ function getWeather(cityName) {
       cityNameH1.text(response.name);
       // currentWind.text(response.wind.speed);
       // day1El.text(response.date);
+      
+      
+      var iconURL= "http://openweathermap.org/img/wn/"
+      var icon = response.weather[0].icon
+      var iconCurr = (iconURL + icon + "@2x.png");
+      console.log(iconCurr);
 
-      $("#wind").text("Wind speed: " + response.wind.speed + "mph");
+
+
       $("#temp").text("Temp(F): " + response.main.temp);
       humid.text("Humidity: " + response.main.humidity);
-      $("#icon").text(response.weather[0].icon);
+      $("#wind").text("Wind speed: " + response.wind.speed + "mph");
+      document.getElementsByTagName("img")[0].src = iconCurr
+      // currentIcon.setAttribute("src", iconCurr);
       $("#weatherCurr").text(response.weather[0].description);
 
       getUVI(response.coord);
