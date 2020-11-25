@@ -200,10 +200,11 @@ var cityList = $("#cityList")
 
 
 function appendCity (city){
+  cityList.empty();
   enteredCities.push(city)
-//  console.log(enteredCities);
+ console.log(enteredCities);
  for ( i = 0; i < enteredCities.length; i++) {
-  cityList.append("<li>" + city + "</li>");
+  cityList.append("<li>" + enteredCities[i] + "</li>");
  }
 };
 
