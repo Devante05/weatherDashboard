@@ -37,6 +37,7 @@ submitForm.on("submit", function (e) {
 
   getWeather(city);
   getForecast(city);
+  appendCity();
 });
 
 function getWeather(cityName) {
@@ -56,7 +57,6 @@ function getWeather(cityName) {
       var iconURL= "http://openweathermap.org/img/wn/"
       var icon = response.weather[0].icon
       var iconCurr = (iconURL + icon + "@2x.png");
-      console.log(iconCurr);
 
 
 
@@ -148,7 +148,7 @@ function getUVI(coord) {
 
       var uvClass = "";
 
-      if (response.value > 10) {
+      if (response.value > 11) {
         uvClass = "higherUV";
       } else if (response.value > 8) {
         uvClass = "highUV";
@@ -194,6 +194,16 @@ function getUVI(coord) {
       console.warn(err);
     });
 }
+
+var enteredCities = [];
+
+
+function appendCity () {
+ var cityVal = document.getElementById("cityInput").value;
+ enteredCities.push(cityVal);
+ console.log(enteredCities);
+};
+
 
 // var value = 0;
 
