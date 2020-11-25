@@ -37,7 +37,7 @@ submitForm.on("submit", function (e) {
 
   getWeather(city);
   getForecast(city);
-  appendCity();
+  appendCity(city);
 });
 
 function getWeather(cityName) {
@@ -196,10 +196,15 @@ function getUVI(coord) {
 }
 
 var enteredCities= [];
+var cityList = $("#cityList")
 
-function appendCity (cityName) {
- enteredCities.push(cityName);
+
+function appendCity (city){
+  enteredCities.push(city)
  console.log(enteredCities);
+ for ( i = 0; i < enteredCities.length; i++) {
+
+ }
 };
 
 
