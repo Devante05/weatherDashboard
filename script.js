@@ -195,12 +195,10 @@ function getUVI(coord) {
     });
 }
 
-var enteredCities = [];
+var enteredCities= [];
 
-
-function appendCity () {
- var cityVal = document.getElementById("cityInput").value;
- enteredCities.push(cityVal);
+function appendCity (cityName) {
+ enteredCities.push(cityName);
  console.log(enteredCities);
 };
 
